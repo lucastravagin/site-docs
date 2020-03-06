@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include("includes/headConsultas.ejs") -%>
+
+<body>
+  <!-- Preloader -->
+  <%- include("includes/preloader.ejs") -%>
+  <%- include("includes/menu.ejs") -%>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMR5452"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url('img/bg-img/mao.jpg');">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Contato</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contato</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Contact Area Start ***** -->
+  <section class="dento-contact-area mt-50 mb-100">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Nossas Unidades</h2>
+        <div class="line"></div>
+      </div>
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area mb-100">
+            <img src="img/bg-img/DOCS_SAUDE_UNIDADE_OSASCO.png" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+                <a target="_blank" href="https://www.facebook.com/DocsSaudeOsasco"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/docssaude/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/dermovisage"><i class="fa fa-linkedin"></i></a>
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>Unidade Osasco</h5>
+                <p>Rua São Luís, 83 - Centro</p>
+                <p>  Osasco/SP - CEP: 06093-040</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area mb-100">
+            <img src="img/bg-img/DOCS_SAUDE_UNIDADE_PIRITUBA.png" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+                <a target="_blank" href="https://www.facebook.com/DocsSaudePirituba"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/docssaude/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/dermovisage"><i class="fa fa-linkedin"></i></a>
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>Unidade Pirituba</h5>
+                <p>Avenida Paula Ferreira, 2578
+                  Pirituba </p><p>São Paulo/SP - CEP: 02916-000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="single-dentist-area mb-100">
+            <img src="img/bg-img/DOCS_SAUDE_UNIDADE_TATUAPE.png" alt="">
+            <!-- Dentist Content -->
+            <div class="dentist-content">
+              <!-- Social Info -->
+              <div class="dentist-social-info">
+                <a target="_blank" href="https://www.facebook.com/DocsSaudeTatuape"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/docssaude/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/dermovisage"><i class="fa fa-linkedin"></i></a>
+              </div>
+              <!-- Dentist Info -->
+              <div class="dentist-info bg-gradient-overlay">
+                <h5>Unidade Tatuapé</h5>
+                <p>Rua Serra de Botucatu, 1037
+                  Tatuapé </p> <p>São Paulo/SP - CEP: 03317-000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="section-heading">
+          <h2></h2>
+          <div class="line-pink"></div>
+        </div>
+        <div class="col-12 col-md-12">
+          <div class="contact-form">
+            <!-- Section Heading -->
+
+            <!-- Form -->
+            <form action="/contacts" method="post">
+              <div class="row">
+                <div class="col-lg-6">
+                  <input type="text" value="<%= body.name %>" name="name" class="form-control mb-30" placeholder="Seu Nome">
+                </div>
+                <div class="col-lg-6">
+                  <input type="text" value="<%= body.telephone %>" name="telephone"  class="form-control mb-30" placeholder="Seu Telefone">
+                </div>
+                <div class="col-lg-6">
+                  <input type="email" value="<%= body.email %>" name="email" class="form-control mb-30" placeholder="E-mail">
+                </div>
+                <div class="col-lg-6">
+                  <input type="text" value="<%= body.subject %>"  name="subject" class="form-control mb-30" placeholder="Assunto">
+                </div>
+                <div class="col-12">
+                  <textarea name="message" class="form-control mb-30" placeholder="Sua mensagem"><%= body.message %></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn dento-btn">Enviar mensagem</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Contact Area End ***** -->
+
+  <!-- ***** Footer Area Start ***** -->
+  <%- include("includes/footer.ejs") -%>
+  <!-- ***** Footer Area End ***** -->
+
+  <!-- ******* All JS ******* -->
+  <!-- jQuery js -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Popper js -->
+  <script src="js/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- All js -->
+  <script src="js/dento.bundle.js"></script>
+  <!-- Active js -->
+  <script src="js/default-assets/active.js"></script>
+
+</body>
+
+</html>

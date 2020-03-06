@@ -1,0 +1,66 @@
+<!-- Book An Oppointment Area Start -->
+<section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix"
+  style="background-image: url('../img/bg-img/mao.jpg');">
+  <div class="container">
+    <div class="row">
+      <!-- Section Heading -->
+      <div class="col-12">
+        <div class="section-heading text-center white">
+          <h2>Contato</h2>
+          <div class="line-pink"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <!-- Appointment Form -->
+        <div class="appointment-form">
+          <form action="/contacts" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group mb-30">
+                  <input type="text" value="<%= body.name %>" name="name" class="form-control" placeholder="Seu Nome"
+                    required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-30">
+                  <input type="text" value="<%= body.telephone %>" name="telephone" class="form-control"
+                    placeholder="Seu Telefone" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-30">
+                  <input type="email" value="<%= body.email %>" name="email" class="form-control"
+                    placeholder="Seu Email" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group mb-30">
+                  <select name="subject" class="form-control">
+                    <% var options = ["Sugestão", "Reclamações", "Dúvidas", "Elogios"]; %>
+                    <% for(var i = 0; i < options.length; i++) { %>
+                      <option value="<%=options[ i ] %>"><%=options[i]%></option>
+                    <% } %>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group mb-30">
+                  <textarea name="message" class="form-control"
+                    placeholder="Sua mensagem"><%= body.message %></textarea>
+                </div>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn dento-btn">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Book An Oppointment Area End -->
